@@ -5,8 +5,8 @@ import { MonthStatistics } from './pages/MonthStatistics/MonthStatistics';
 import {Header} from './shared/Header/Header'
 function App() {
   return (
-    <div className="App">
-      <Header/>
+    <div className="container">
+    <Header/>
      <Routes>
       
       <Route path="/" element={<Home/>} />
