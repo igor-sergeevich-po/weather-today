@@ -11,7 +11,7 @@ export const ThisDay = (props: Props) => {
                 <div className={s.this__temp}>20</div>
                 <div className={s.this__day_name}>Сегодня</div>
             </div>
-            <GlobalSvgSelector id='sun'/>
+            <GlobalSvgSelector id='rostov-sun'/>
         </div>
         <div className={s.bottom__block}>
             <div className={s.this__time}>
