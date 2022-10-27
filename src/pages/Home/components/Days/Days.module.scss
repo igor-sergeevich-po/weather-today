@@ -78,9 +78,14 @@
         transition: 0.2s;
     }
 }
-
 .tab {
     &:active {
+        background: rgb(136, 186, 229);
+        color: #fff;
+    }
+}
+.tab {
+    &.active {
         background: $primary-color;
         color: #fff;
     }
