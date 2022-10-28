@@ -2,38 +2,15 @@ import React, {useEffect, useState} from 'react'
 import { GlobalSvgSelector } from '../../assets/images/icons/global/GlobalSvgSelector'
 import Select from 'react-select'
 import s from './Header.module.scss'
+import { useTheme } from '../../hooks/useTheme'
+import { Theme } from '../../context/ThemeContext'
 
 
 interface Props {}
 
 export const Header = (props: Props) => {
-  const [theme, setTheme] = useState('light')
-
-  useEffect(() => {
-    const root = document.querySelector(':root') as HTMLElement;
-
-    const components = [
-      'body-background',
-      'components-background',
-      'card-background',
-      'card-shadow',
-      'text-color',
-    ]
-    components.forEach(component => {
-      root.style.setProperty(
-        `--${component}-default`,
-         `var(--${component}-${theme})`
-         );
-    })
-    root.style.setProperty(
-      '--body-background-default',
-       `var(--body-background-${theme})`
-       );
-
-  }, [theme])
-
-
-
+  const theme = useTheme();
+  
   const options = [
     {value: 'city-1', label: 'Rostov-on-Don' },
     {value: 'city-2', label: 'Bataysk' },
@@ -43,7 +20,7 @@ export const Header = (props: Props) => {
   const colorStyles = {
     control: (styles: any) => ({
       ...styles,
-      backgroundColor: theme === 'dark' ? '#4f4f4f' :'rgba(71, 147, 255, 0.2)',
+      backgroundColor: theme.theme === Theme.DARK ? '#4f4f4f' :'rgba(71, 147, 255, 0.2)',
       width: '200px',
       height: '45px',
       border: 'none',
@@ -52,13 +29,14 @@ export const Header = (props: Props) => {
     }),
     singleValue: (styles: any) => ({
       ...styles,
-      color: theme === 'dark' ? '#fff' : '#000',
+      color: theme.theme === Theme.DARK ? '#fff' : '#000',
     }),
   }
 
  
   function changeTheme(){
-    setTheme(theme === 'light'? 'dark' : 'light')
+    theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT)
+
   }
 
   
