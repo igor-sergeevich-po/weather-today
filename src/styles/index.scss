@@ -1,5 +1,6 @@
 @import '~normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;1,100;1,300;1,600&display=swap');
+@import '../styles/variables.scss';
 
 *,
 *:after,
@@ -10,6 +11,7 @@
 body {
     position: relative;
     font-family: 'Barlow Condensed', sans-serif;
+    background-color: var(#{--body-background-default});
 }
 .container {
     max-width: 1200px;
