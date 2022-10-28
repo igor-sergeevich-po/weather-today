@@ -115,8 +115,8 @@ export const GlobalSvgSelector = ({ id }: Props) => {
     <path d="M156 175 l-5 -15 9 0 10 0 0 15 0 15 -4 0 -4 0 -6 -15z" />
   </g>
 </svg>
-            );
-            break;
+            )
+        
             case "change-theme" :
                 return (
                     <svg width='22px' version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
@@ -393,7 +393,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
   <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#9e4352" stroke="none" />
   <g transform="translate(0.000000,100.000000) scale(0.100000,-0.100000)" fill="#c44f5e" stroke="none" />
 </svg>
-                        )
+                        );
                         case 'rain':
                             return (
                               <svg

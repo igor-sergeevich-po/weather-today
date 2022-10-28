@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from 'react'
 import { GlobalSvgSelector } from '../../assets/images/icons/global/GlobalSvgSelector'
 import Select from 'react-select'
 import s from './Header.module.scss'
@@ -23,6 +22,7 @@ export const Header = (props: Props) => {
       backgroundColor: theme.theme === Theme.DARK ? '#4f4f4f' :'rgba(71, 147, 255, 0.2)',
       width: '200px',
       height: '45px',
+      cursor: 'pointer',
       border: 'none',
       borderRadius: '8px',
       zIndex: 100,

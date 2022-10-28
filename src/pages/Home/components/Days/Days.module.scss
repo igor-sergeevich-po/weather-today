@@ -36,7 +36,8 @@
     }
     .temp__day {
         font-size: 18px;
-        color: var(#{--text-color-default})
+        
+        color: var(#{--text-color-default}); 
     }
     .temp__night {
         font-size: 13px;

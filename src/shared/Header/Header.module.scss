@@ -11,6 +11,19 @@
     align-items: center;
 
 }
+
+.change_theme {
+    
+    svg {
+        width: 22px;
+        fill: rgb(255, 118, 6);
+        &:hover {
+            transition: 0.3s;
+            transform: rotate(-36deg);
+        }
+    }
+}
+
 .change_theme,
 .logo {
     margin-right: 20px;
